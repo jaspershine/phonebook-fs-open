@@ -1,3 +1,4 @@
+/* eslint-disable no-unused-vars */
 const mongoose = require('mongoose')
 
 if (process.argv.length<3) {
@@ -5,14 +6,14 @@ if (process.argv.length<3) {
   process.exit(1)
 }
 
-if (process.argv.length == 3) {
-    Person
-        .find({})
-        .then(result => {
-            result.forEach(person => {
-                console.log(person)
-            })
-            mongoose.connection.close()
+if (process.argv.length === 3) {
+  Person
+    .find({})
+    .then(result => {
+      result.forEach(person => {
+        console.log(person)
+      })
+      mongoose.connection.close()
     })
 
 }
